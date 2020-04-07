@@ -145,7 +145,7 @@ on obtient encore (sur le terminal) :
 coucou
 ```
 
-Ça n'a aucun effet, la sortie est encore écrite sur le terminal. C'est la preuve que les "redirections" sont incapables de rediriger les écritures envoyées sur le terminal.
+Les "redirections" n'ont eu aucun effet, la sortie est encore écrite sur le terminal. C'est la preuve que les "redirections" sont incapables de rediriger les écritures envoyées sur le terminal.
 
 L'exemple classique
 -----------------------
