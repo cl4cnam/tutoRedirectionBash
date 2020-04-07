@@ -18,14 +18,14 @@ Comment ça se passe ?
 Bonne réponse
 --------------
 1. L'utilisateur lance un terminal et rentre son login
-	a. Le shell bash s'exécute dans le terminal
-	a. Le shell bash ouvre (en lecture-écriture) un fichier spécial représentant le terminal et l'indique dans **`desc[0]`** (on peut considérer que **`desc`** est une variable Array interne inaccessible)
-	a. Le shell bash fait **`desc[1] = desc[0]`**
-	a. Le shell bash fait **`desc[2] = desc[0]`**
+	1. Le shell bash s'exécute dans le terminal
+	1. Le shell bash ouvre (en lecture-écriture) un fichier spécial représentant le terminal et l'indique dans **`desc[0]`** (on peut considérer que **`desc`** est une variable Array interne inaccessible)
+	1. Le shell bash fait **`desc[1] = desc[0]`**
+	1. Le shell bash fait **`desc[2] = desc[0]`**
 1. L'utilisateur tape une commande avec (éventuellement) des redirections
-	a. Les redirections (c.-à-d. les ouvertures de fichiers) sont faites,
-	a. La commande est exécutée
-	a. Les fichiers ouverts (dans l'étape 'a.') sont fermés
+	1. Les redirections (c.-à-d. les ouvertures de fichiers) sont faites,
+	1. La commande est exécutée
+	1. Les fichiers ouverts (dans l'étape 'i.') sont fermés
 
 Fausse idée
 --------------
@@ -96,7 +96,7 @@ Maintenant, si on exécute
 </pre>
 ça marche, on obtient '**`Bonjour !`**' dans le fichier '*essai.out*'
 
-###Remarque
+### Remarque
 
 - On peut aussi écrire les "redirections" en début de commande :<pre style="background-color: #d0d0d0">	4>essai.out python3 essai.py</pre>(ce qui est plus conforme à l'ordre des opérations)
 
