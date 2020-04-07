@@ -72,80 +72,87 @@ Exemple 1
 ----------
 
 Voici un fichier '*essai.py*' écrit en python3 :
-<pre style="background-color: #d0d0d0">
-	def ecrireSurFichierIndiquéDansDesc(num, texte):
-		f = open(num, 'w')
-		f.write(texte)
+```python
+def ecrireSurFichierIndiquéDansDesc(num, texte):
+	f = open(num, 'w')
+	f.write(texte)
 
-	ecrireSurFichierIndiquéDansDesc(4, 'Bonjour !')
-</pre>
+ecrireSurFichierIndiquéDansDesc(4, 'Bonjour !')
+```
 
 Si on l'exécute directement
-<pre style="background-color: #d0d0d0">
-	python3 essai.py
-</pre>
+```shell
+python3 essai.py
+```
 on obtient :
-<pre style="background-color: #d0d0d0">
-	OSError: [Errno 9] Bad file descriptor
-</pre>
+```
+OSError: [Errno 9] Bad file descriptor
+```
 ce qui est normal, puisqu'il n'y a pas de fichier indiqué dans **`desc[4]`**
 
 Maintenant, si on exécute
-<pre style="background-color: #d0d0d0">
-	python3 essai.py 4>essai.out
-</pre>
+```shell
+python3 essai.py 4>essai.out
+```
 ça marche, on obtient '**`Bonjour !`**' dans le fichier '*essai.out*'
 
 ### Remarque
 
-- On peut aussi écrire les "redirections" en début de commande :<pre style="background-color: #d0d0d0">	4>essai.out python3 essai.py</pre>(ce qui est plus conforme à l'ordre des opérations)
+- On peut aussi écrire les "redirections" en début de commande :
+```shell
+4>essai.out python3 essai.py
+```
+(ce qui est plus conforme à l'ordre des opérations)
 
-- Plus étonnant, on peut écrire les redirections au milieu de la commande :<pre style="background-color: #d0d0d0">	python3 4>essai.out essai.py'</pre>
+- Plus étonnant, on peut écrire les redirections au milieu de la commande :
+```shell
+python3 4>essai.out essai.py'
+```
 
 Exemple 2
 ----------
 
 Voici un fichier '*essai2.py*' écrit en python3 :
-<pre style="background-color: #d0d0d0">
-	def getCheminFichierTerminal():
-		import subprocess as subPr
-		cheminFichierTerminal = subPr.check_output('tty', universal_newlines=True)
-		return cheminFichierTerminal[:-1]
+```python
+def getCheminFichierTerminal():
+	import subprocess as subPr
+	cheminFichierTerminal = subPr.check_output('tty', universal_newlines=True)
+	return cheminFichierTerminal[:-1]
 
-	def ecrireSurTerminal(texte):
-		f = open(getCheminFichierTerminal(), 'w')
-		f.write(texte + '\n')
+def ecrireSurTerminal(texte):
+	f = open(getCheminFichierTerminal(), 'w')
+	f.write(texte + '\n')
 
-	ecrireSurTerminal('coucou')
-</pre><br>
+ecrireSurTerminal('coucou')
+```
 Ce programme écrit vraiment sur le terminal.<br><br>
 
 Si on l'exécute directement
-<pre style="background-color: #d0d0d0">
-	python3 essai2.py
-</pre>
+```shell
+python3 essai2.py
+```
 on obtient (sur le terminal) :
-<pre style="background-color: #d0d0d0">
-	coucou
-</pre><br>
+```
+coucou
+```
 
 Si on "redirige" la sortie
-<pre style="background-color: #d0d0d0">
-	python3 essai2.py >essai2.out 2>&1
-</pre>
+```shell
+python3 essai2.py >essai2.out 2>&1
+```
 on obtient encore (sur le terminal) :
-<pre style="background-color: #d0d0d0">
-	coucou
-</pre>
+```
+coucou
+```
 
 Ça n'a aucun effet, la sortie est encore écrite sur le terminal. C'est la preuve que les "redirections" sont incapables de rediriger les écritures envoyées sur le terminal.
 
 L'exemple classique
 -----------------------
 
-<pre style="background-color: #d0d0d0">
-	monProgramme >unFichier 2>&1
-</pre>
+```shell
+monProgramme >unFichier 2>&1
+```
 
 1. Le fichier **`unFichier`** est ouvert en écriture et est indiqué dans **`desc[1]`**
 1. L'opération **`desc[2] = desc[1]`** est effectuée (donc **`desc[2]`** indique le fichier **`unFichier`**)
