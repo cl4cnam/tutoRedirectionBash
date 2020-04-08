@@ -3,11 +3,11 @@ Vous avez entendu parler des redirections du shell bash. Il s'agit de trucs du g
 Une redirection, c'est quoi ?
 ===========================
 
-En fait
+En fait :heavy_check_mark:
 --------------
 C'est une ouverture de fichier (rien de plus !)
 
-Fausse idée
+Fausse idée :x:
 --------------
 - Ça prend la sortie (ou bien l'entrée) d'un programme
 - et ça la redirige
@@ -15,7 +15,7 @@ Fausse idée
 Comment ça se passe ?
 ===========================
 
-En fait
+En fait :heavy_check_mark:
 --------------
 1. L'utilisateur lance un terminal et rentre son login
 	1. Le shell bash s'exécute dans le terminal
@@ -27,21 +27,21 @@ En fait
 	1. La commande est exécutée
 	1. Les fichiers ouverts (dans l'étape 'i.') sont fermés
 
-Fausse idée
+Fausse idée :x:
 --------------
 - La commande est exécutée
 - mais les redirections interceptent les flux d'entrées et de sorties
 
 Les programmes écrivent/lisent où ?
 ===========================
-Où les programmes en console écrivent/lisent-ils quand ils font une commande genre ***`print`*** ou bien genre ***`input`*** (en python) ?
+Où les programmes en console écrivent/lisent-ils en général quand ils font une commande genre ***`print`*** ou bien genre ***`input`*** (en python) ?
 
-En fait
+En fait :heavy_check_mark:
 --------------
 - Ils écrivent sur le fichier ouvert indiqué dans **`desc[1]`**
 - Ils lisent sur le fichier ouvert indiqué dans **`desc[0]`**
 
-Fausse idée
+Fausse idée :x:
 --------------
 - Ils écrivent sur la console (ou sur le terminal)
 - Ils lisent sur le clavier
