@@ -3,7 +3,7 @@ Vous avez entendu parler des redirections du shell bash. Il s'agit de trucs du g
 Une redirection, c'est quoi ?
 ===========================
 
-Bonne réponse
+En fait
 --------------
 C'est une ouverture de fichier (rien de plus !)
 
@@ -15,7 +15,7 @@ Fausse idée
 Comment ça se passe ?
 ===========================
 
-Bonne réponse
+En fait
 --------------
 1. L'utilisateur lance un terminal et rentre son login
 	1. Le shell bash s'exécute dans le terminal
@@ -36,7 +36,7 @@ Les programmes écrivent/lisent où ?
 ===========================
 Où les programmes en console écrivent/lisent-ils quand ils font une commande genre ***`print`*** ou bien genre ***`input`*** (en python) ?
 
-Bonne réponse
+En fait
 --------------
 - Ils écrivent sur le fichier ouvert indiqué dans **`desc[1]`**
 - Ils lisent sur le fichier ouvert indiqué dans **`desc[0]`**
