@@ -73,11 +73,11 @@ Exemple 1
 
 Voici un fichier '*essai.py*' écrit en python3 :
 ```python
-def ecrireSurFichierIndiquéDansDesc(num, texte):
+def ecrireSurFichierDitDansDesc(num, texte):
 	f = open(num, 'w')
 	f.write(texte)
 
-ecrireSurFichierIndiquéDansDesc(4, 'Bonjour !')
+ecrireSurFichierDitDansDesc(4, 'Bonjour !')
 ```
 
 Si on l'exécute directement
