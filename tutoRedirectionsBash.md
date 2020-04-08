@@ -43,7 +43,7 @@ En fait :heavy_check_mark:
 
 Fausse idée :x:
 --------------
-- Ils écrivent sur la console (ou sur le terminal)
+- Ils écrivent sur le terminal
 - Ils lisent sur le clavier
 
 ***`Étrange !`***
@@ -125,7 +125,7 @@ def ecrireSurTerminal(texte):
 
 ecrireSurTerminal('coucou')
 ```
-Ce programme écrit vraiment sur le terminal.<br><br>
+Ce programme écrit vraiment sur le terminal (ce qui est très inhabituel).<br><br>
 
 Si on l'exécute directement
 ```shell
