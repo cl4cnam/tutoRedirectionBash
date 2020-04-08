@@ -1,6 +1,6 @@
 Vous avez entendu parler des redirections du shell bash. Il s'agit de trucs du genre ***`monProgramme >unFichier 2>&1`***. J'essaie de vous expliquer comment ça marche.
 
-Une redirection, c'est quoi ?
+***`Une redirection, c'est quoi ?`***
 ===========================
 
 En fait :heavy_check_mark:
@@ -12,7 +12,7 @@ Fausse idée :x:
 - Ça prend la sortie (ou bien l'entrée) d'un programme
 - et ça la redirige
 
-Comment ça se passe ?
+***`Comment ça se passe ?`***
 ===========================
 
 En fait :heavy_check_mark:
@@ -32,7 +32,7 @@ Fausse idée :x:
 - La commande est exécutée
 - mais les redirections interceptent les flux d'entrées et de sorties
 
-Les programmes écrivent/lisent où ?
+***`Les programmes écrivent/lisent où ?`***
 ===========================
 Où les programmes en console écrivent/lisent-ils en général quand ils font une commande genre ***`print`*** ou bien genre ***`input`*** (en python) ?
 
@@ -46,13 +46,13 @@ Fausse idée :x:
 - Ils écrivent sur la console (ou sur le terminal)
 - Ils lisent sur le clavier
 
-Étrange !
+***`Étrange !`***
 ===========================
 C'est pas du bidon tout ça ? C'est contraire à ce qu'on a appris, non ?
 
 Voyons tout cela plus précisément :
 
-Plus précisément
+***`Plus précisément`***
 ================
 - ***`>cheminFichier`*** : ouvre *cheminFichier* en écriture (mode écrasement ou création) et l'indique dans **`desc[1]`**
 - ***`n>cheminFichier`*** : ouvre *cheminFichier* en écriture (mode écrasement ou création) et l'indique dans **`desc[n]`**
@@ -65,7 +65,7 @@ Plus précisément
 - ***`n>&-`*** : ferme le fichier ouvert indiqué dans **`desc[n]`** et fait **`desc[n] = null`**
 - ***`n<&-`*** : idem (ferme le fichier ouvert indiqué dans **`desc[n]`** et fait **`desc[n] = null`**)
 
-Exemples
+***`Exemples`***
 ========
 
 Exemple 1
