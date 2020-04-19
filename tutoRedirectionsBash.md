@@ -157,3 +157,7 @@ monProgramme >unFichier 2>&1
 1. Le fichier **`unFichier`** est ouvert en écriture et est indiqué dans **`desc[1]`**
 1. L'opération **`desc[2] = desc[1]`** est effectuée (donc **`desc[2]`** indique le fichier **`unFichier`**)
 1. Le programme **`monProgramme`** est lancé. Habituellement, il écrit sur le fichier indiqué dans **`desc[1]`** sauf les erreurs qu'il écrit sur le fichier indiqué dans **`desc[2]`**
+
+***`Référence`***
+===========================
+https://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_07
